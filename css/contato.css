@@ -1,0 +1,171 @@
+:root {
+    --maincolor: #eae1d2;
+    --black: #131313;
+    --btn: #835c2c;
+    --text: #c1a16b;
+    --p: #926f34;
+    --border: 0.1rem solid #c1a16b;
+    --gold: #E6C164;
+    font-size: 62.5%; /* Define 1rem = 10px para facilitar cálculos */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box; /* Evita overflow por padding/margin */
+}
+
+body {
+    background-color: var(--maincolor);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: var(--border);
+    background-color: #3e321c;
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: var(--border);
+    background-color: #3e321c;
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Nome do site no menu */
+.logo img {
+    width: 20rem;
+    margin-left: 2rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
+    font-weight: 300;
+    color: var(--text);
+}
+
+.navbar a:hover {
+    color: #e9d5a0;
+    font-size: clamp(1.7rem, 2.1vw, 1.9rem);
+    
+}
+
+.margin {
+    padding: 6rem;
+    margin: 0;
+}
+
+.home {
+    padding-top: 4rem; /* Espaço para o header fixo */
+}
+
+.contact {
+    padding: 6rem 2rem;
+    text-align: center;
+    background-color: #f5f0e1;
+    margin: 14rem 25rem 11rem 25rem;
+    border-radius: 2rem;
+}
+
+.contact h2 {
+    font-size: 4rem;
+    color: var(--p);
+}
+.contact p {
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    color: var(--text);
+}
+
+.contact-form {
+    max-width: 60rem;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: #3e321c;
+}
+
+.contact-form button {
+    width: 18rem;
+    background-color: var(--btn);
+    color: antiquewhite;
+    border-radius: 2rem;
+    height: 3rem;
+    align-items: center;
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    display: block; /* Garante que as margens automáticas funcionem */
+}
+
+.contact-form button:hover {
+    background-color: #f5f0e1;
+    border: var(--border);
+    color: var(--p);
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: 0.3rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 10rem;
+}
+
+.contact-form input:hover ,
+.contact-form textarea:hover {
+    background-color: #efe9df;
+}
+
+footer {
+    background-color: #3e321c; /* Cor de fundo do seu footer */
+    color: var(--maincolor); /* Cor do texto do seu footer */
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.4rem;
+    bottom: 0; /* Alinha a parte inferior do elemento com a parte inferior da janela */
+    left: 0; /* Alinha a parte esquerda do elemento com a parte esquerda da janela */
+    width: 100%; /* Faz o footer ocupar toda a largura */
+    z-index: 100; /* Garante que o footer fique acima de outros elementos (se necessário) */
+}

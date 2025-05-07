@@ -1,0 +1,448 @@
+:root {
+    --maincolor: #eae1d2;
+    --black: #131313;
+    --btn: #835c2c;
+    --text: #c1a16b;
+    --p: #926f34;
+    --border: 0.1rem solid #c1a16b;
+    font-size: 62.5%; /* Define 1rem = 10px para facilitar cálculos */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box; /* Evita overflow por padding/margin */
+}
+
+body {
+    background-color: var(--maincolor);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: var(--border);
+    background-color: #3e321c;
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: var(--border);
+    background-color: #3e321c;
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Nome do site no menu */
+.logo img {
+    width: 20rem;
+    margin-left: 2rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
+    font-weight: 300;
+    color: var(--text);
+}
+
+.navbar a:hover {
+    color: #e9d5a0;
+    font-size: clamp(1.7rem, 2.1vw, 1.9rem);
+    
+}
+
+.boder {
+    padding: 6rem;
+}
+
+.cont {
+    padding: 10rem 9rem  0;
+}
+
+.home {
+    padding-top: 4rem; /* Espaço para o header fixo */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra em telas menores */
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(80, 71, 54);
+    border-radius: 3rem;
+    margin: 10rem auto;
+    max-width: 100%; /* Remove largura fixa */
+}
+
+.colunm-1 {
+    flex: 1 1 40rem; /* Cresce e encolhe, com base mínima de 400px */
+    padding: 2rem;
+}
+
+.h1-logo {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--maincolor);
+    margin: 1.5rem 0;
+}
+
+.p-logo {
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    color: var(--text);
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: var(--btn);
+    color: var(--maincolor);
+    padding: 0.8rem 1.6rem;
+    border-radius: 1.5rem;
+    font-size: clamp(1.4rem, 2vw, 1.7rem);
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: var(--maincolor);
+    color: #a76b05;
+}
+
+.colunm-2 {
+    flex: 1 1 40rem;
+    display: flex;
+    justify-content: center;
+}
+
+.banner {
+    width: 100%;
+    height: auto; /* Evita distorção */
+    max-height: 40rem;
+    border-radius: 3rem;
+    object-fit: cover; /* Ajusta imagem sem distorcer */
+}
+/*final do container*/
+
+.introduction .div-introduction {
+    text-align: center;
+}
+
+.div-introduction h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    justify-content: center;
+    align-items: center;
+    color: var(--p);
+}
+
+.div-introduction p {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--text);
+    margin: 4rem 4rem 6rem 4rem;
+    text-align: center;
+    display: center;
+    word-break: keep-all;
+}
+
+.div-introduction h3 {
+    font-size: 2.7rem;
+    color: var(--p);
+    margin-top: 4rem;
+}
+
+.list-introduction {
+    font-size: 2rem;
+    margin: 4rem 4rem 18rem 4rem ;
+    font-weight: 300;
+    color: var(--text);
+}
+
+.criar-planner {
+    padding: 5rem 2rem;
+    text-align: center;
+    border-radius: 2rem;
+}
+
+.criar-planner h2 {
+    margin-bottom: 3rem;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--p);
+}
+
+#study-planner-form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 5rem;
+    background-color: #f5f0e1;
+    border: var(--border);
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.form-planner {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.form-planner label {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--p);
+    font-weight: 400;
+}
+
+.form-planner input[type="text"],
+.form-planner input[type="time"] {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: 0.1rem solid var(--text);
+    border-radius: 0.3rem;
+}
+
+.form-planner input:hover {
+    background-color: #efe9df;
+}
+
+.days-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.days-checkboxes input[type="checkbox"] {
+    margin-right: 0.2rem;
+}
+
+#study-planner-form button {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    background-color: var(--btn);
+    color: var(--maincolor);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0.1rem 0.2rem 0.3rem rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+    width: 18rem;
+    align-items: center;
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    display: block; /* Garante que as margens automáticas funcionem */
+}
+
+#study-planner-form button:hover {
+    background-color: #ece1cdb4;
+    border: var(--border);
+    color: var(--btn);
+}
+
+#planner-visualizacao {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #f5f0e1;
+    border: var(--border);
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+#planner-visualizacao h3 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: var(--p);
+}
+
+#planner-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    color: var(--p);
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+#planner-table th,
+#planner-table td {
+    border: var(--border);
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+#planner-table th {
+    background-color: #fcfaf8b4;
+    font-weight: bold;
+}
+
+#planner-visualizacao button#download-planner {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    background-color: var(--btn);
+    color: var(--maincolor);
+    width: 18rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0.1rem 0.2rem 0.3rem rgba(0, 0, 0, 0.2);
+}
+
+#planner-visualizacao button#download-planner:hover {
+    background-color: #ece1cdb4;
+    border: var(--border);
+    color: var(--btn);
+}
+
+#planner-table button {
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    background-color: #d9534f; /* Cor vermelha para excluir */
+    color: var(--maincolor);
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+#planner-table button:hover {
+    background-color: #c9302c;
+}
+
+.features {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+    max-width: 100rem;
+    margin: 3rem auto;
+    margin-bottom: 9rem;
+}
+
+.feature-item {
+    background-color: #f5f0e1;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
+}
+
+.feature-item img {
+    width: 6rem;
+    height: 6rem;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.features h2 {
+    font-size: 3rem;
+    color: var(--btn);
+}
+
+.feature-item h3 {
+    color: var(--btn);
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.feature-item p {
+    text-align: center;
+    color: var(--text);
+    font-size: 1.4rem;
+}
+
+.how-it-works {
+    padding: 6rem 2rem;
+    text-align: center;
+    background-color: #f5f0e1;
+    border-radius: 2rem;
+    margin-bottom: 10rem;
+}
+
+.how-it-works h2 {
+    font-size: 3rem;
+    color: var(--btn);
+}
+
+.how-it-works h3 {
+    color: var(--btn);
+    text-align: center;
+    font-size: 1.7rem;;
+    margin-bottom: 1rem;
+}
+
+.how-it-works p {
+    text-align: center;
+    color: var(--text);
+    font-size: 1.4rem;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+    max-width: 100rem;
+    margin: 3rem auto;
+}
+
+.step-item {
+    background-color: var(--maincolor);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #3e321c; /* Cor de fundo do seu footer */
+    color: var(--maincolor); /* Cor do texto do seu footer */
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.4rem;
+    bottom: 0; /* Alinha a parte inferior do elemento com a parte inferior da janela */
+    left: 0; /* Alinha a parte esquerda do elemento com a parte esquerda da janela */
+    width: 100%; /* Faz o footer ocupar toda a largura */
+    z-index: 100; /* Garante que o footer fique acima de outros elementos (se necessário) */
+
+}

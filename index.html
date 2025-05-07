@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--ignore-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mente Afiada</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Logo do site -->
+    <header class="header">
+        <section>
+            <span class="logo"><img src="../img/logo/logo (4).png" alt="logo"></span>
+            <!-- Barra de navegação -->
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="../planner/planner.html">Planner de Estudo</a>
+                <a href="../mapa mental/#">Mapa Mental</a>
+                <a href="../contato/contato.html">Contato</a>
+                <a href="../sobre/sobre.html">Sobre</a>
+                <a href="../equipe/#">Equipe</a>
+            </nav>
+        </section>
+    </header>
+        <!-- Container principal da home -->
+        <section class="margin">
+        <section class="home" id="home">
+            <div class="container">
+                <div class="colunm-1">
+                    <h1 class="h1-logo">O Aprendizado Eficiente!</h1>
+                    <p class="p-logo">Desbloqueie seu potencial máximo. Através de estratégias comprovadas e conteúdos relevantes, você aprenderá de forma mais inteligente, retendo informações e aplicando o conhecimento com confiança.</p>
+                    <a href="#" class="btn">Saiba Mais</a>
+                </div>
+                <div class="colunm-2">
+                    <img class="banner" src="../img/banner/banner.png" alt="banner">
+                </div>
+            </div>
+        </section>
+        <section class="cont">
+            <section class="introduction">
+                <div class="div-introduction">
+                    <h1 class="h1-introduction">Sejam bem-vindos ao Mente Afiada!</h1>
+                    <p>Se o seu objetivo é um aprendizado que realmente faz a diferença, otimizando seu tempo e elevando sua compreensão a novos patamares, então prepare-se!<br><br> O Mente Afiada foi desenvolvido pensando em você. Nosso portal oferece soluções de estudos intuitivas e acessíveis, começando com planners de estudos personalizáveis. Com alguns cliques, você poderá criar um plano que se encaixa perfeitamente na sua rotina, permitindo que você gerencie seu tempo com inteligência e maximize sua produtividade. E para ir além da organização linear, convidamos você a explorar os mapas mentais criativos. Essa ferramenta poderosa transformará a maneira como você absorve e conecta informações, tornando o aprendizado mais dinâmico e engajador.</p>
+                    <p>Acreditamos que o aprendizado eficaz não se trata apenas de acumular informações, mas sim de compreendê-las profundamente e aplicá-las com confiança. Estamos aqui para fornecer as ferramentas que te darão clareza, foco e a motivação necessária para alcançar seus objetivos acadêmicos e profissionais.</p>
+                </div>
+            </section>
+            <section class="ferramentas-menu">
+                <h3 class="h3-fmenu">Potencialize Seus Estudos com Nossas Ferramentas Essenciais!</h3>
+            <div class="box-container">
+                <div class="box">
+                    <img src="../img/produtos/planner.png" alt="item-1">
+                    <h3>Planner de Estudos</h3>
+                    <div class="text">Organize seu tempo, defina metas claras e acompanhe seu progresso de forma intuitiva. Crie um plano de estudos que se adapta à sua rotina e maximize sua produtividade.</div>
+                    <a href="../planner/planner.html" class="btn">Clique aqui</a>
+                </div>
+                <div class="box">
+                    <img src="../img/produtos/mapa.png" alt="item-2">
+                    <h3>Mapas Mentais</h3>
+                    <div class="text">Transforme informações complexas em diagramas visuais poderosos. Faça brainstorming, conecte ideias e memorize conceitos com clareza e eficiência.</div>
+                    <a href="#" class="btn">Clique aqui</a>
+                </div>
+            </div>
+            </section>
+        </section>
+    </section>
+    <footer>
+        <p>&copy; 2025 Mente Afiada. Todos os direitos reservados.</p>
+    </footer>
+</body>
+<script>
+    document.querySelector('.header section').addEventListener('click', function(e) {
+        if (e.target.textContent === '☰') {
+            document.querySelector('.navbar').classList.toggle('active');
+        }
+    });
+</script>
+
+</html>

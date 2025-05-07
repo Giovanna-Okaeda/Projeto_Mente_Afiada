@@ -1,0 +1,162 @@
+:root {
+    --maincolor: #eae1d2;
+    --black: #131313;
+    --btn: #835c2c;
+    --text: #c1a16b;
+    --p: #926f34;
+    --border: 0.1rem solid #c1a16b;
+    --gold: #E6C164;
+    font-size: 62.5%; /* Define 1rem = 10px para facilitar cálculos */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box; /* Evita overflow por padding/margin */
+}
+
+body {
+    background-color: var(--maincolor);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: var(--border);
+    background-color: #3e321c;
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Nome do site no menu */
+.logo img {
+    width: 20rem;
+    margin-left: 2rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
+    font-weight: 300;
+    color: var(--text);
+}
+
+.navbar a:hover {
+    color: #e9d5a0;
+    font-size: clamp(1.7rem, 2.1vw, 1.9rem);
+    
+}
+
+.margin {
+    padding: 6rem;
+}
+
+.cont {
+    padding: 5rem 9rem  15rem;
+}
+
+.home {
+    padding-top: 4rem; /* Espaço para o header fixo */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra em telas menores */
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(80, 71, 54);
+    border-radius: 3rem;
+    margin: 10rem auto;
+    max-width: 100%; /* Remove largura fixa */
+}
+
+.colunm-1 {
+    flex: 1 1 40rem; /* Cresce e encolhe, com base mínima de 400px */
+    padding: 2rem;
+}
+
+.h1-logo {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 800;
+    color: var(--maincolor);
+    margin: 1.5rem 2rem;
+}
+
+.p-logo {
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    color: var(--text);
+    font-weight: 300;
+    margin: 1.5rem 2rem;
+}
+
+.colunm-2 {
+    flex: 1 1 40rem;
+    display: flex;
+    justify-content: center;
+}
+
+.banner {
+    width: 100%;
+    height: auto; /* Evita distorção */
+    max-height: 40rem;
+    border-radius: 3rem;
+    object-fit: cover; /* Ajusta imagem sem distorcer */
+}
+/*final do container*/
+
+.introduction .div-introduction {
+    text-align: center;
+}
+
+.div-introduction h1 {
+    font-size: 5rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--p);
+    margin-bottom: 4rem;
+    font-weight: 800;
+}
+
+.div-introduction p {
+    font-size: 2rem;
+    color: var(--text);
+    margin: 2rem 13rem 2rem 13rem;
+    font-weight: 300;
+    text-align: center;
+    display: center;
+    word-break: keep-all;
+}
+
+footer {
+    background-color: #3e321c; /* Cor de fundo do seu footer */
+    color: var(--text); /* Cor do texto do seu footer */
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.4rem;
+    bottom: 0; /* Alinha a parte inferior do elemento com a parte inferior da janela */
+    left: 0; /* Alinha a parte esquerda do elemento com a parte esquerda da janela */
+    width: 100%; /* Faz o footer ocupar toda a largura */
+    z-index: 100; /* Garante que o footer fique acima de outros elementos (se necessário) */
+
+}
+

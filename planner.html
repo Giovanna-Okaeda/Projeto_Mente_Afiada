@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--ignore-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mente Afiada</title>
+    <link rel="stylesheet" href="../css/planner.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Logo do site -->
+    <header class="header">
+        <section>
+            <span class="logo"><img src="../img/logo/logo (4).png" alt="logo"></span>
+            <!-- Barra de navegação -->
+            <nav class="navbar">
+                <a href="../index/index.html">Home</a>
+                <a href="planner.html">Planner de Estudo</a>
+                <a href="../mapa mental/#">Mapa Mental</a>
+                <a href="../contato/contato.html">Contato</a>
+                <a href="../sobre/sobre.html">Sobre</a>
+                <a href="../equipe/#">Equipe</a>
+            </nav>
+        </section>
+    </header>
+    <!-- Container principal da home -->
+    <section class="boder">
+        <section class="home" id="home">
+            <div class="container">
+                <div class="colunm-1">
+                    <h1 class="h1-logo">Planner de Estudos</h1>
+                    <p class="p-logo">Dê um passo decisivo rumo a um aprendizado mais organizado e eficaz com o Planner de Estudos. Desenvolvido para ser seu parceiro inteligente, esta ferramenta intuitiva te ajuda a estruturar seu tempo, priorizar suas atividades e visualizar seu progresso de maneira clara e motivadora.</p>
+                    <a href="#" class="btn">Saiba Mais</a>
+                </div>
+                <div class="colunm-2">
+                    <img class="banner" src="../img/banner/banner.png" alt="banner">
+                </div>
+            </div>
+            </section>
+        <section class="cont">
+            <section class="introduction">
+                <div class="div-introduction">
+                    <h1 class="h1-introduction">Organize Seu Aprendizado, Desbloqueie Seu Potencial.</h1>
+                    <p>Cansado da bagunça de anotações soltas e prazos perdidos? A Mente Afiada apresenta o seu novo aliado na jornada do conhecimento: um planner de estudos digital intuitivo e poderoso, projetado para te ajudar a planejar, acompanhar e otimizar cada etapa do seu aprendizado.</p>
+                    <h3>Descubra o Poder da Organização Inteligente:</h3>
+                </div>
+                <div class="list-introduction">
+                    <ul>
+                        <li>  <strong>Planejar seus horários e tarefas:</strong> Visualize seu cronograma de estudos de forma clara e eficiente.</li><br>
+                        <li><strong>Definir metas e acompanhar seu progresso:</strong> Mantenha o foco nos seus objetivos e celebre cada conquista.</li> <br>
+                        <li><strong>Organizar seus materiais de estudo:</strong> Tenha tudo o que você precisa ao alcance de um clique.</li><br>
+                        <li><strong>Gerenciar seus prazos e entregas:</strong> Nunca mais perca um compromisso importante.</li><br>
+                        <li><strong>Analisar seu desempenho e otimizar suas estratégias:</strong> Aprenda com seus hábitos de estudo e refine sua abordagem.</li><br>
+                    </ul>
+                </div>
+                <section id="criar-planner" class="criar-planner">
+                    <h2>Crie seu Planner de Estudos!</h2>
+                    <form id="study-planner-form">
+                        <div class="form-planner">
+                            <label for="materia">Matéria: </label>
+                            <input type="text" id="materia" name="materia" required>
+                        </div>
+                        <hr>
+                        <div class="form-planner">
+                            <label>Dias da Semana:</label>
+                            <div class="days-checkboxes">
+                                <input type="checkbox" id="segunda" name="dia" value="Segunda">
+                                <label for="segunda">Segunda</label>
+            
+                                <input type="checkbox" id="terca" name="dia" value="Terça">
+                                <label for="terca">Terça</label>
+            
+                                <input type="checkbox" id="quarta" name="dia" value="Quarta">
+                                <label for="quarta">Quarta</label>
+            
+                                <input type="checkbox" id="quinta" name="dia" value="Quinta">
+                                <label for="quinta">Quinta</label>
+            
+                                <input type="checkbox" id="sexta" name="dia" value="Sexta">
+                                <label for="sexta">Sexta</label>
+            
+                                <input type="checkbox" id="sabado" name="dia" value="Sábado">
+                                <label for="sabado">Sábado</label>
+            
+                                <input type="checkbox" id="domingo" name="dia" value="Domingo">
+                                <label for="domingo">Domingo</label>
+                            </div>
+                        </div><br>
+                        <div class="form-planner">
+                            <label for="hora-inicio">Horário de Início:</label>
+                            <input type="time" id="hora-inicio" name="hora-inicio">
+                        </div>
+                        <button type="button" onclick="adicionarMateria()">Adicionar Matéria</button>
+                </form>
+                <div id="planner-visualizacao">
+                    <h3>Seu Planner de Estudos:</h3>
+                    <table id="planner-table">
+                        <thead>
+                            <tr>
+                                <th>Matéria</th>
+                                <th>Segunda</th>
+                                <th>Terça</th>
+                                <th>Quarta</th>
+                                <th>Quinta</th>
+                                <th>Sexta</th>
+                                <th>Sábado</th>
+                                <th>Domingo</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </thead>
+                    </table>
+                    <button id="download-planner" onclick="downloadPlanner()">Baixar Planner</button>
+                </div>
+            </section>
+            <section id="funcionalidades" class="features">
+                <h2>Funcionalidades do Planner de Estudos</h2>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <img src="../img/produtos/calendario.png" alt="Calendário">
+                        <h3>Planejamento Personalizado</h3>
+                        <p>Crie um cronograma de estudos que se adapta à sua rotina.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="../img/produtos/relogio.png" alt="Horário">
+                        <h3>Flexibilidade de Horários</h3>
+                        <p>Defina horários específicos para cada matéria em cada dia.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="../img/produtos/org.png" alt="Organização">
+                        <h3>Organização Centralizada</h3>
+                        <p>Tenha todas as suas matérias e horários em um só lugar.</p>
+                    </div>
+                    </div>
+                    <section id="como-funciona" class="how-it-works">
+                        <h2>Como Funciona a Criação do seu Planner</h2>
+                        <div class="steps">
+                            <div class="step-item">
+                                <h3>1. Insira a Matéria</h3>
+                                <p>Digite o nome da matéria que você deseja planejar.</p>
+                            </div>
+                            <div class="step-item">
+                                <h3>2. Escolha os Dias</h3>
+                                <p>Selecione os dias da semana em que você estudará essa matéria.</p>
+                            </div>
+                            <div class="step-item">
+                                <h3>3. Defina os Horários</h3>
+                                <p>Escolha o horário de início e fim para o estudo dessa matéria.</p>
+                            </div>
+                            <div class="step-item">
+                                <h3>4. Adicione e Visualize</h3>
+                                <p>Clique em "Adicionar Matéria" e veja seu planner sendo construído.</p>
+                            </div>
+                            <div class="step-item">
+                                <h3>5. Baixe seu Planner</h3>
+                                <p>Clique em "Baixar Planner" para salvar seu cronograma de estudos.</p>
+                            </div>
+                        </div>
+                    </section>
+                
+            </section>
+            </section>
+                </section>
+        </section>
+            <footer>
+                <p>&copy; 2025 Mente Afiada. Todos os direitos reservados.</p>
+            </footer>
+    <script src="../js/main.js/planner.js"></script>
+</body>
+</html>

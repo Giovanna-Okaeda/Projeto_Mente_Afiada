@@ -1,0 +1,331 @@
+:root {
+    --maincolor: #eae1d2;
+    --black: #131313;
+    --btn: #835c2c;
+    --text: #c1a16b;
+    --h1: #926f34;
+    --border: 0.1rem solid #c1a16b;
+    --gold: #E6C164;
+    font-size: 62.5%; /* Define 1rem = 10px para facilitar cálculos */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box; /* Evita overflow por padding/margin */
+}
+
+body {
+    background-color: var(--maincolor);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: var(--border);
+    background-color: #3e321c;
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: var(--border);
+    background-color: #3e321c;
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Nome do site no menu */
+.logo img {
+    width: 20rem;
+    margin-left: 2rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
+    font-weight: 300;
+    color: var(--text);
+}
+
+.navbar a:hover {
+    color: #e9d5a0;
+    font-size: clamp(1.7rem, 2.1vw, 1.9rem);
+    
+}
+
+.margin {
+    padding: 6rem;
+    margin: 0;
+}
+
+.home {
+    padding-top: 4rem; /* Espaço para o header fixo */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra em telas menores */
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(80, 71, 54);
+    border-radius: 3rem;
+    margin: 10rem auto;
+    max-width: 100%; /* Remove largura fixa */
+}
+
+.colunm-1 {
+    flex: 1 1 40rem; /* Cresce e encolhe, com base mínima de 400px */
+    padding: 2rem;
+}
+
+.h1-logo {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 800;
+    color: var(--maincolor);
+    margin: 1.5rem 2rem;
+}
+
+.p-logo {
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    color: var(--text);
+    font-weight: 300;
+    margin: 1.5rem 2rem;
+}
+
+.colunm-2 {
+    flex: 1 1 40rem;
+    display: flex;
+    justify-content: center;
+}
+
+.banner {
+    width: 100%;
+    height: auto; /* Evita distorção */
+    max-height: 40rem;
+    border-radius: 3rem;
+    object-fit: cover; /* Ajusta imagem sem distorcer */
+}
+
+.btn {
+    background-color: var(--btn);
+    color: var(--maincolor);
+    padding: 0.8rem 1.6rem;
+    border-radius: 1.5rem;
+    margin: 1.5rem 2rem;
+    font-size: clamp(1.4rem, 2vw, 1.7rem);
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: var(--maincolor);
+    color: #a76b05;
+}
+/*final do container*/
+
+.introduction .div-introduction {
+    text-align: center;
+}
+
+.introduction {
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+.div-introduction h1 {
+    font-size: 5rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--h1);
+    margin: 14rem 0 6rem 0;
+    font-weight: 800;
+}
+
+.div-introduction p {
+    font-size: 2rem;
+    color: var(--text);
+    margin: 4rem;
+    font-weight: 300;
+    text-align: center;
+    display: center;
+    word-break: keep-all;
+}
+
+.h3-fmenu {
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    color: var(--btn);
+    margin: 2rem 0;
+    margin-top: 17rem;
+    text-align: center;
+}
+
+.ferramentas-menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    padding-top: 2rem;
+    margin: 0 10rem 15rem 10rem;
+}
+
+.ferramentas-menu .box-container .box {
+    text-align: center;
+    border: var(--border);
+    padding: 3rem;
+    border-radius: 2rem;
+    margin: 1rem;
+}
+
+.ferramentas-menu .box-container .box img {
+    height: 8rem;
+    width: auto;
+}
+
+.ferramentas-menu .box-container .box h3 {
+    color: var(--btn);
+    font-size: clamp(2rem, 3vw, 3rem);
+    padding: 1rem 0;
+}
+
+.ferramentas-menu .box-container .box .text {
+    color: #987332;
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    padding: 1rem 0;
+}
+
+.ferramentas-menu .box-container .box:hover {
+    background-color: #d3be9aad;
+}
+
+.ferramentas-menu .box-container .box:hover h3 {
+    color: var(--maincolor);
+    font-size: clamp(2.2rem, 3.2vw, 3.2rem);
+}
+
+.ferramentas-menu .box-container .box:hover .text {
+    color: #a4690b;
+}
+
+footer {
+    background-color: #3e321c; /* Cor de fundo do seu footer */
+    color: var(--text); /* Cor do texto do seu footer */
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.4rem;
+    bottom: 0; /* Alinha a parte inferior do elemento com a parte inferior da janela */
+    left: 0; /* Alinha a parte esquerda do elemento com a parte esquerda da janela */
+    width: 100%; /* Faz o footer ocupar toda a largura */
+    z-index: 100; /* Garante que o footer fique acima de outros elementos (se necessário) */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Esconde menu em telas pequenas */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #3e321c;
+        padding: 1rem;
+    }
+
+    .navbar.active {
+        display: flex; /* Mostra menu quando ativo */
+    }
+
+    .navbar a {
+        margin: 1rem 0;
+        font-size: 2rem;
+    }
+
+    /* Botão hamburguer */
+    .header section::after {
+        content: "☰";
+        font-size: 2.5rem;
+        color: var(--maincolor);
+        cursor: pointer;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .colunm-1, .colunm-2 {
+        flex: 1 1 100%;
+        margin: 0;
+    }
+
+    .banner {
+        max-height: 30rem;
+    }
+
+    .h1-logo {
+        font-size: 3rem;
+    }
+
+    .p-logo {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 2.5rem;
+        margin-left: 1rem;
+    }
+
+    .h2-menu {
+        font-size: 3.5rem;
+    }
+
+    .p-menu {
+        font-size: 1.6rem;
+    }
+
+    .h3-fmenu {
+        font-size: 2.5rem;
+    }
+
+    .ferramentas-menu .box-container .box {
+        padding: 2rem;
+    }
+
+    .ferramentas-menu .box-container .box img {
+        height: 6rem;
+    }
+}
