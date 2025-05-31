@@ -18,8 +18,8 @@ Tecnologias utilizadas: HTML, CSS, JavaScript.
 
 ```plaintext
 .
-├── api/                   # Pasta para seus arquivos JSON
-├── css/                   # Pasta para seus arquivos .css
+├── api/                   # Pasta para arquivos JSON
+├── css/                   # Pasta para arquivos .css
 │   ├── contato.css
 │   ├── equipe.css
 │   ├── home.css
@@ -39,7 +39,7 @@ Tecnologias utilizadas: HTML, CSS, JavaScript.
 │   │   ├── desenho/
 │   │   └── dourados/
 │   └── produtos/
-├── js/                    # Pasta para seus arquivos .js
+├── js/                    # Pasta para arquivos .js
 │   ├── api.js
 │   ├── contato.js
 │   ├── equipe.js
