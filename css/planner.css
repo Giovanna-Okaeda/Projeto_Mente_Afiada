@@ -1,28 +1,8 @@
-:root {
-    --maincolor: #eae1d2;
-    --black: #131313;
-    --btn: #835c2c;
-    --text: #c1a16b;
-    --p: #926f34;
-    --border: 0.1rem solid #c1a16b;
-    font-size: 62.5%; /* Define 1rem = 10px para facilitar cálculos */
+html {
+  scroll-behavior: smooth;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    transition: 0.2s linear;
-    font-family: "Roboto", sans-serif;
-    box-sizing: border-box; /* Evita overflow por padding/margin */
-}
-
-body {
-    background-color: var(--maincolor);
-}
-
+/*barra de nav*/
 .header {
     position: fixed;
     top: 0;
@@ -30,7 +10,7 @@ body {
     right: 0;
     border-bottom: var(--border);
     background-color: #3e321c;
-    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+    z-index: 1000; 
 }
 
 .header section {
@@ -42,26 +22,7 @@ body {
     margin: 0 auto;
 }
 
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    border-bottom: var(--border);
-    background-color: #3e321c;
-    z-index: 1000; /* Garante que o header fique acima de outros elementos */
-}
-
-.header section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    max-width: 120rem;
-    margin: 0 auto;
-}
-
-/* Nome do site no menu */
+/* Nome do site na nav*/
 .logo img {
     width: 20rem;
     margin-left: 2rem;
@@ -82,113 +43,129 @@ body {
 .navbar a:hover {
     color: #e9d5a0;
     font-size: clamp(1.7rem, 2.1vw, 1.9rem);
-    
 }
 
-.boder {
-    padding: 6rem;
+.banner-scroll {
+    background-color: rgb(80, 71, 54);
+    background-image: url('../img/banner/baanner2.png');
+    background-size: 50%;               
+    background-repeat: no-repeat;
+    background-position: right center;  
+    background-attachment: fixed;      
+    height: 80rem;                      
+    width: 100%;
+    z-index: 1;
+    position: relative;
 }
 
-.cont {
-    padding: 10rem 9rem  0;
+.banner-scroll h1 {
+    font-size: 12rem;
+    padding-top: 26rem;
+    padding-left: 4rem;
+    color: #eae1d2;
+}
+
+.banner-scroll h2 {
+    font-size: 6rem;
+    padding-left: 4rem;
+    color: var(--text);
+    font-weight: 400;
+}
+
+.banner-scroll::before {
+    background-size: 60%;        
+    background-repeat: no-repeat;
+    background-position: right center; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;              
+    transform: translateZ(0);
+    transition: opacity 0.3s ease;
 }
 
 .home {
-    padding-top: 4rem; /* Espaço para o header fixo */
+    padding-top: 4rem;
 }
 
 .container {
     display: flex;
-    flex-wrap: wrap; /* Permite quebra em telas menores */
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    background-color: rgb(80, 71, 54);
     border-radius: 3rem;
-    margin: 10rem auto;
-    max-width: 100%; /* Remove largura fixa */
+    margin: 2rem;
+    max-width: 100%;
 }
 
-.colunm-1 {
-    flex: 1 1 40rem; /* Cresce e encolhe, com base mínima de 400px */
-    padding: 2rem;
-}
-
-.h1-logo {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    color: var(--maincolor);
-    margin: 1.5rem 0;
-}
-
-.p-logo {
-    font-size: clamp(1.4rem, 2vw, 1.8rem);
-    color: var(--text);
-    font-weight: 300;
+.container h1 {
+    font-size: 4rem;
+    color: var(--p);
     margin-bottom: 2rem;
+}
+    
+.container p {
+    font-size: 2.5rem;
+    color: var(--text);
+    text-align: center;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 3rem;
 }
 
 .btn {
+    text-align: center;
     background-color: var(--btn);
     color: var(--maincolor);
+    width: 18rem;
     padding: 0.8rem 1.6rem;
     border-radius: 1.5rem;
-    font-size: clamp(1.4rem, 2vw, 1.7rem);
+    margin: 1.5rem 2rem;
+    font-size: 2rem;
     cursor: pointer;
     display: inline-block;
 }
 
 .btn:hover {
-    background-color: var(--maincolor);
+    background-color: var(--btnhover);
     color: #a76b05;
-}
-
-.colunm-2 {
-    flex: 1 1 40rem;
-    display: flex;
-    justify-content: center;
-}
-
-.banner {
-    width: 100%;
-    height: auto; /* Evita distorção */
-    max-height: 40rem;
-    border-radius: 3rem;
-    object-fit: cover; /* Ajusta imagem sem distorcer */
+    border: var(--border);
 }
 /*final do container*/
 
-.introduction .div-introduction {
-    text-align: center;
+.apresentação {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 6rem;
 }
 
-.div-introduction h1 {
+.column-1 img {
+    height: 50rem;
+    background-color: #dbc8a8;
+    margin-left: 8rem;
+    border-radius: 9rem;
+}
+
+.column-2 {
+    margin: 7rem 10rem 10rem 10rem;
+}
+
+.column-2 h3 {
+    color: var(--p);
     font-size: 4rem;
-    font-weight: 800;
-    justify-content: center;
-    align-items: center;
-    color: var(--p);
+    margin-bottom: 2rem;
 }
 
-.div-introduction p {
+.column-2 li {
     font-size: 2rem;
-    font-weight: 300;
     color: var(--text);
-    margin: 4rem 4rem 6rem 4rem;
-    text-align: center;
-    display: center;
-    word-break: keep-all;
 }
 
-.div-introduction h3 {
-    font-size: 2.7rem;
-    color: var(--p);
-    margin-top: 4rem;
-}
-
-.list-introduction {
-    font-size: 2rem;
-    margin: 4rem 4rem 18rem 4rem ;
-    font-weight: 300;
-    color: var(--text);
+#criar-planner,
+#planner-visualizacao {
+    display: none; 
 }
 
 .criar-planner {
@@ -210,7 +187,7 @@ body {
     flex-direction: column;
     gap: 1.5rem;
     padding: 5rem;
-    background-color: #f5f0e1;
+    background-color: #fff2d0;
     border: var(--border);
     border-radius: 1rem;
     box-shadow: 0.1rem 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
@@ -265,13 +242,13 @@ body {
     margin-top: 2rem;
     width: 18rem;
     align-items: center;
-    margin-left: auto; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
-    display: block; /* Garante que as margens automáticas funcionem */
+    margin-left: auto; 
+    margin-right: auto;
+    display: block; 
 }
 
 #study-planner-form button:hover {
-    background-color: #ece1cdb4;
+    background-color: var(--btnhover);
     border: var(--border);
     color: var(--btn);
 }
@@ -279,7 +256,7 @@ body {
 #planner-visualizacao {
     margin-top: 3rem;
     padding: 2rem;
-    background-color: #f5f0e1;
+    background-color: #fff2d0;
     border: var(--border);
     border-radius: 0.5rem;
     box-shadow: 0.1rem 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
@@ -289,6 +266,29 @@ body {
     margin-bottom: 1rem;
     font-size: 2.5rem;
     color: var(--p);
+}
+
+#planner-visualizacao table#planner-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    color: var(--p);
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+#planner-visualizacao table#planner-table th,
+#planner-visualizacao table#planner-table td {
+    border: var(--border);
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 1.6rem;
+    white-space: nowrap; 
+}
+
+#planner-visualizacao table#planner-table th {
+    background-color: #fcfaf8b4;
+    font-weight: bold;
 }
 
 #planner-table {
@@ -327,7 +327,7 @@ body {
 }
 
 #planner-visualizacao button#download-planner:hover {
-    background-color: #ece1cdb4;
+    background-color: var(--btnhover);
     border: var(--border);
     color: var(--btn);
 }
@@ -335,7 +335,47 @@ body {
 #planner-table button {
     padding: 0.5rem 1rem;
     font-size: 1.4rem;
-    background-color: #d9534f; /* Cor vermelha para excluir */
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-left: 0.5rem; 
+    transition: background-color 0.2s ease;
+}
+
+#planner-table .edit-btn {
+    background-color: #926f34; 
+    color: white;
+}
+
+#planner-table .edit-btn:hover {
+    background-color: #b08b49;
+}
+
+#planner-table .delete-btn {
+    background-color: #d9534f; 
+    color: white;
+}
+
+#planner-table .delete-btn:hover {
+    background-color: #c9302c;
+}
+
+
+#study-planner-form button {
+    background-color: var(--btn); 
+    color: var(--maincolor);
+}
+
+#study-planner-form button:hover {
+    background-color: var(--btnhover);
+    border: var(--border);
+    color: var(--btn);
+}
+
+#planner-table button {
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    background-color: #d9534f; 
     color: var(--maincolor);
     border: none;
     border-radius: 0.3rem;
@@ -345,6 +385,83 @@ body {
 
 #planner-table button:hover {
     background-color: #c9302c;
+}
+
+.search-suggestions {
+  margin: 3rem 20rem;
+  padding: 20px;
+  border-radius: 5px;
+  border: 0.1rem solid #e5bd77;
+  text-align: center;
+}
+
+.search-suggestions:hover {
+    background-color: #d3be9a;
+    border: var(--border);
+}
+
+.search-suggestions h2 {
+  color: var(--p);
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.search-suggestions input[type="text"] {
+    width: 60rem;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1.7rem;
+    margin-right: 3rem;
+}
+
+.search-suggestions button {
+  background-color: var(--btn);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.search-suggestions button:hover {
+  background-color: var(--btnhover);
+  color: var(--p);
+  border: var(--border );
+}
+
+#search-results {
+  margin-top: 15px;
+}
+
+#search-results ul {
+  list-style: none;
+  padding: 0;
+}
+
+#search-results ul li {
+  margin-bottom: 10px;
+}
+
+#search-results ul li a {
+  color: #1d1e1f;
+  text-decoration: none;
+}
+
+#search-results ul li a:hover {
+  text-decoration: underline;
+  color: #383a3c;
+  transition: none;
+}
+
+#search-results p.no-results {
+  color: #777;
 }
 
 .features {
@@ -362,7 +479,7 @@ body {
 }
 
 .feature-item {
-    background-color: #f5f0e1;
+    background-color: #fcfaf8b4;
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0.1rem 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
@@ -396,7 +513,7 @@ body {
 .how-it-works {
     padding: 6rem 2rem;
     text-align: center;
-    background-color: #f5f0e1;
+    background-color: #fff2d0;
     border-radius: 2rem;
     margin-bottom: 10rem;
 }
@@ -428,21 +545,207 @@ body {
 }
 
 .step-item {
-    background-color: var(--maincolor);
+    background-color: #fcfaf8b4      ;
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0.1rem 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    background-color: #3e321c; /* Cor de fundo do seu footer */
-    color: var(--maincolor); /* Cor do texto do seu footer */
+    background-color: #3e321c; 
+    color: var(--maincolor);
     text-align: center;
     padding: 2rem;
     font-size: 1.4rem;
-    bottom: 0; /* Alinha a parte inferior do elemento com a parte inferior da janela */
-    left: 0; /* Alinha a parte esquerda do elemento com a parte esquerda da janela */
-    width: 100%; /* Faz o footer ocupar toda a largura */
-    z-index: 100; /* Garante que o footer fique acima de outros elementos (se necessário) */
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 100; 
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1286px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .apresentação {
+        margin-top: 9rem;
+    }
+
+    #search-results p.no-results {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1150px) { 
+    .container p {
+        margin: 1rem;
+    }
+    
+    .apresentação {
+        margin: 3rem;
+        display: flex;
+    }
+
+    .column-1 img {
+        display: none;
+    }
+
+    .column-2 {
+        margin: 5rem;
+        text-align: center;
+    } 
+
+    .column-2 h3 {
+        font-size: 3rem;
+    }
+
+    .search-suggestions {
+        margin: 4rem; 
+        padding: 15px; 
+    }
+
+    .search-suggestions h2 {
+        font-size: 3rem; 
+        margin-bottom: 1.5rem;
+    }
+
+    .search-suggestions input[type="text"] {
+        width: calc(100% - 20px); 
+        margin-right: 0; 
+        margin-bottom: 2rem; 
+        font-size: 2rem;
+    }
+
+    .search-suggestions button {
+        font-size: 1.7rem; 
+        padding: 0.8rem 1.2rem; 
+        height: 4rem;
+    }
+}
+
+/*telas pequenas*/
+@media (max-width: 767px) {
+    .container h1 {
+        font-size: 3rem;
+    }
+
+    .container p {
+        font-size: 2rem;
+        margin: 0 2rem 2rem 2rem;
+    }
+
+    .column-2 li {
+        font-size: 2rem;
+    }
+
+    .btn {
+        width: 15rem;
+        font-size: 1.7rem;
+    }
+
+    .criar-planner h2 {
+        font-size: 3rem;
+    }
+
+    #planner-visualizacao {
+        overflow-x: auto; 
+    }
+
+    #planner-visualizacao table#planner-table {
+        width: auto; 
+    }
+     .search-suggestions {
+        margin: 4rem; 
+        padding: 15px; 
+    }
+
+    .search-suggestions h2 {
+        font-size: 2.5rem; 
+        margin-bottom: 1.5rem;
+    }
+
+    .search-suggestions input[type="text"] {
+        width: calc(100% - 20px); 
+        margin-right: 0; 
+        margin-bottom: 1rem; 
+        font-size: 1.5rem;
+    }
+
+    .search-suggestions button {
+        font-size: 1.7rem; 
+        padding: 0.8rem 1.2rem; 
+        height: 4rem;
+        color: var(--maincolor);
+    }
+
+    .features h2 {
+        font-size: 3rem;
+    }
+}
+
+/*telas muito pequenas */
+@media (max-width: 480px) {
+    .container h1 {
+        font-size: 2.5rem;
+    }
+    
+    .container p {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        width: 12rem;
+        font-size: 1.3rem;
+    }
+
+    .column-2 {
+        margin: 2rem;
+        
+    } 
+
+    .column-2 h3 {
+        font-size: 2.5rem;
+    }
+
+    .column-2 li {
+        font-size: 1.5rem;
+    }
+
+    .criar-planner h2 {
+        font-size: 2.5rem;
+    }
+
+    .form-planner label {
+        font-size: 1.5rem;
+    }
+
+    #study-planner-form button {
+        width: 15rem;
+        font-size: 1.3rem;
+    }
+
+    #planner-visualizacao button#download-planner {
+        width: 13rem;
+        font-size: 1.3rem;
+    }
+
+    .search-suggestions h2 {
+        font-size: 2.5rem;
+    }
+
+    .search-suggestions button {
+        width: 13rem;
+        font-size: 1.3rem;
+        height: 3.5rem;
+    }
+
+    .features h2 {
+        font-size: 2.5rem;
+    }
 
 }

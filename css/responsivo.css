@@ -1,0 +1,150 @@
+@media (max-width: 1800px) {
+    #menu-btn {
+        display: none;
+    }
+}
+
+@media (max-width: 1286px) {
+    body {
+        font-size: 18px;
+    }
+
+    .header section .navbar {
+        display: flex; 
+    }
+
+    #menu-btn {
+        display: none;
+    }
+
+    .banner-scroll {
+        height: 60rem;
+        background-position: right fixed;
+        background-size: 75rem;
+    }
+
+    .banner-scroll h1 {
+        font-size: 8rem;
+    }
+
+    .banner-scroll h2 {
+        font-size: 4rem;
+    }
+}
+
+/* Media Query para Telas Médias (até 1150px) - ATIVA O MENU MOBILE */
+@media (max-width: 1150px) {
+    .header section .navbar {
+        display: none; 
+    }
+
+    #menu-btn {
+        display: inline-block; 
+        font-size: 2.5rem;
+        color: var(--text);
+        cursor: pointer;
+        margin-left: 20px;
+    }
+
+    .header section .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 250px; 
+        background-color: #4e3d20; 
+        border: var(--border);
+        border-top: none;
+        border-radius: 0 0 8px 8px;
+        box-sizing: border-box;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+        z-index: 1000;
+    }
+
+    .header section .navbar.active {
+        max-height: 300px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .header section .navbar a {
+        display: block;
+        margin: 0.5rem 1.5rem;
+        text-align: left;
+        font-size: 1.8rem;
+        color: var(--text);
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.2s ease, font-size 0.5s ease;
+    }
+
+    .header section .navbar a:hover {
+        color: #e9d5a0;
+        font-size: 2rem;
+    }
+}
+
+
+/* Media Query para Celulares (até 767px) */
+@media (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+
+    .banner-scroll {
+        height: 40rem;
+        background-size: cover;
+        background-position: center center;
+        padding: 15rem 2rem;
+    }
+
+    .banner-scroll h1 {
+        font-size: 6rem;
+        padding-top: 2rem;
+        padding-left: 2rem;
+    }
+
+    .banner-scroll h2 {
+        font-size: 3rem;
+        padding-left: 2rem;
+    }
+
+    .colunm-1, .colunm-2 {
+        flex: 1 1 100%;
+        margin: 0;
+    }
+}
+
+
+/* Media Query para Smartphones Muito Pequenos (até 480px) */
+@media (max-width: 480px) {
+    .header section .navbar {
+        width: 200px;
+    }
+
+    .header section .navbar a {
+        font-size: 1.7rem;
+    }
+
+    .header section .navbar a:hover {
+        color: #e9d5a0;
+        font-size: 1.8rem;
+    }
+
+    .banner-scroll h1 {
+        font-size: 4rem;
+        padding-left: 1rem;
+    }
+
+    .banner-scroll h2 {
+        font-size: 2.2rem;
+        padding-left: 1rem;
+    }
+}

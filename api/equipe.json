@@ -1,0 +1,14 @@
+[
+    {
+        "id": "giovanna-okaeda",
+        "nome": "Giovanna Albuquerque Okaeda",
+        "cargo": "Fundadora e Desenvolvedora", 
+        "foto": "../img/banner/giovanna.jpg", 
+        "descricao": "Como estudante de Análise e Desenvolvimento de Sistemas (ADS), enfrentei os mesmos desafios que muitos colegas: a busca por métodos de estudo eficazes e uma organização impecável. Foi dessa experiência pessoal que nasceu a Mente Afiada! Meu objetivo é facilitar a jornada de aprendizado de outros estudantes, desenvolvendo ferramentas intuitivas e práticas que realmente fazem a diferença na rotina de estudos.", 
+        "redesSociais": {
+            "linkedin": "https://www.linkedin.com/in/giovanna-okaeda-108662250/",
+            "github": "https://github.com/Giovanna-Okaeda",
+            "instagram": "https://www.instagram.com/okaeda._/"
+        }
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "id": "planner-de-estudo",
+        "nome": "Planner de Estudo Personalizado",
+        "descricaoCurta": "Organização completa para alta performance.",
+        "descricaoCompleta": "Nosso Planner de Estudo Personalizado permite que você organize suas matérias, defina horários flexíveis e acompanhe seu progresso de forma intuitiva. É a ferramenta ideal para maximizar sua produtividade e alcançar seus objetivos acadêmicos. Totalmente adaptável às suas necessidades e estilo de aprendizado. Clique para começar a criar seu plano agora!",
+        "imagemCard": "../img/produtos/planner.png",
+        "linkDiretoFerramenta": "planner.html"
+    },
+    {
+        "id": "mapa-mental-criativo",
+        "nome": "Mapas Mentais Criativos para Download",
+        "descricaoCurta": "Transforme ideias complexas em diagramas claros.",
+        "descricaoCompleta": "Explore nossa coleção de modelos de mapas mentais pré-prontos e editáveis. Ideal para brainstorming, memorização de conceitos e conexão de ideias. Baixe, edite em seu programa favorito e revolucione a forma como você estuda e organiza pensamentos complexos. Acesse nossa galeria de modelos!",
+        "imagemCard": "../img/produtos/mapa.png",   
+        "linkDiretoFerramenta": "mapa-mental.html"
+    }
+]

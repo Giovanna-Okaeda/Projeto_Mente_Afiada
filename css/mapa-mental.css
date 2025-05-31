@@ -1,0 +1,480 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--maincolor);
+    color: #3e321c;
+}
+
+/*barra de nav*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: var(--border);
+    background-color: #3e321c;
+    z-index: 1000;
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Nome do site no menu */
+.logo img {
+    width: 20rem;
+    margin-left: 2rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
+    font-weight: 300;
+    color: var(--text);
+}
+
+.navbar a:hover,
+.navbar a:focus {
+    color: #e9d5a0;
+    font-size: clamp(1.7rem, 2.1vw, 1.9rem);
+    outline: none;
+}
+
+.banner-scroll {
+    background-color: rgb(80, 71, 54);
+    background-image: url('../img/banner/baanner2.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-attachment: fixed;
+    height: 80rem;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-scroll h1 {
+    font-size: 12rem;
+    padding-top: 26rem;
+    padding-left: 4rem;
+    color: #eae1d2;
+}
+
+.banner-scroll h2 {
+    font-size: 6rem;
+    padding-left: 4rem;
+    color: var(--text);
+    font-weight: 400;
+}
+
+.margin {
+    margin-top: 100vh;
+}
+
+
+.home {
+    padding-top: 4rem; 
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3rem;
+    margin: 2rem;
+    max-width: 100%;
+}
+
+.container h1 {
+    font-size: 4rem;
+    color: var(--p);
+    margin-bottom: 2rem;
+}
+    
+.container p {
+    font-size: 2.5rem;
+    color: var(--text);
+    text-align: center;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    text-align: center;
+    background-color: var(--btn);
+    color: var(--maincolor);
+    width: 18rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 1.5rem;
+    margin: 1.5rem 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: var(--btnhover);
+    color: #a76b05;
+    border: var(--border);
+}
+
+/* Seções de mapas */
+.tipos-mapas {
+    display: none; 
+    margin: 3rem auto 6rem auto; 
+    padding: 1rem;
+    overflow-x: hidden;
+    white-space: normal;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+    scroll-behavior: smooth;
+    text-align: center;
+    background-color: #f4e1b4;
+    border-radius: 2rem;
+    max-width: 120rem; 
+}
+
+.mapa-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: flex-start;
+    padding: 4rem 2rem;
+    background-color: #efd9a7;
+    border-radius: 2rem;
+    margin-bottom: 7rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100rem; 
+}
+
+.mapa {
+    position: relative;
+    display: block;
+    flex: 0 0 auto;
+    margin: 1.5rem; 
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0.6;
+    cursor: pointer;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: #d2b584;
+    width: 25rem;
+    max-width: 100%; 
+}
+
+.mapa img {
+    width: 100%; 
+    height: auto; 
+    padding: 1.4rem;
+    display: block;
+    border-radius: 1rem;
+    user-select: none;
+    pointer-events: none;
+    background-color: #d2b584;
+}
+
+.tipos-mapas h2 {
+    font-size: 4rem;
+    color: var(--p);
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    border-radius: 2rem;
+    display: inline-block;
+    margin-bottom: 5rem;
+}
+
+.tipos-mapas h2:hover {
+    color: rgb(165, 112, 42);
+}
+
+.tipos-mapas.mostrar {
+    display: block;
+    opacity: 1;
+}
+
+.mapa:hover,
+.mapa.destacado {
+    transform: scale(1.2);
+    transition: 0.8s;
+    opacity: 1;
+    box-shadow: 0 8px 16px rgba(167,107,5,0.8);
+    border: 3px solid #a76b05;
+    z-index: 10;
+}
+
+.mapa .download-btn {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: var(--btn);
+    color: #f5e6c5;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.6rem;
+    border: none;
+    border-radius: 0.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    user-select:none;
+}
+
+.mapa:hover .download-btn,
+.mapa.destacado .download-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.download-btn:hover {
+    background-color: var(--maincolor);
+    color: #a76b05;
+    transition: 0.4s;
+    border: var(--border);
+}
+
+.features {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+    max-width: 100rem;
+    margin: 3rem auto;
+    margin-bottom: 9rem;
+}
+
+.feature-item {
+    background-color: #fcfaf8b4;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
+}
+
+.feature-item img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.features h2 {
+    font-size: 3rem;
+    color: var(--btn);
+}
+
+.feature-item h3 {
+    color: var(--btn);
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.feature-item p {
+    text-align: center;
+    color: var(--text);
+    font-size: 1.4rem;
+}
+
+.how-it-works {
+    padding: 6rem 2rem;
+    text-align: center;
+    background-color: #fff2d0;
+    border-radius: 2rem;
+    margin-bottom: 10rem;
+}
+
+.how-it-works h2 {
+    font-size: 3rem;
+    color: var(--btn);
+}
+
+.how-it-works h3 {
+    color: var(--btn);
+    text-align: center;
+    font-size: 1.7rem;;
+    margin-bottom: 1rem;
+}
+
+.how-it-works p {
+    text-align: center;
+    color: var(--text);
+    font-size: 1.4rem;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+    max-width: 100rem;
+    margin: 3rem auto;
+}
+
+.step-item {
+    background-color: #fcfaf8b4      ;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #3e321c; 
+    color: var(--maincolor);
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.4rem;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    z-index: 100; 
+}
+
+/*media queries pra responsividade*/
+@media (max-width: 1150px) {
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container p {
+        margin: 1rem;
+    }
+
+    .tipos-mapas {
+        margin: 8rem 2% 4rem 2%;
+        padding: 1rem 1rem;
+    }
+
+    .mapa-container {
+        padding: 2.5rem 0.5rem; 
+    }
+
+    .mapa {
+        width: calc(33.33% - 3rem);
+        max-width: 30rem;
+        margin: 1.5rem;
+    }
+    
+    .mapa img {
+        padding: 1rem;
+    }
+}
+
+/* Para telas menores*/
+@media (max-width: 767px) {
+    .container h1 {
+        font-size: 3rem;
+    }
+
+    .container p {
+        font-size: 2rem;
+        margin: 0 2rem 2rem 2rem;
+    }
+
+    .btn {
+        width: 15rem;
+        font-size: 1.7rem;
+    }
+
+    .tipos-mapas {
+        margin: 6rem 1% 3rem 1%;
+        padding: 1rem 0.5rem;
+    }
+
+    .tipos-mapas h2 {
+        font-size: 2.5rem;
+    }
+
+    .mapa-container {
+        padding: 2rem 0.2rem;
+    }
+
+    .mapa {
+        width: 30%; 
+        max-width: 30rem; 
+        margin: 1rem auto; 
+    }
+
+    .mapa img {
+        padding: 0.8rem;
+        width: 15rem;
+    }
+    
+    .features-list,
+    .steps {
+        grid-template-columns: 1fr; 
+        gap: 2rem;
+        margin: 2rem 3rem;
+    }
+
+    .feature-item, .step-item {
+        padding: 1.5rem;
+    }
+
+    .features h2, .how-it-works h2 {
+        font-size: 2.5rem;
+    }
+
+}
+
+/* Para telas muito pequenas*/
+@media (max-width: 480px) {
+    .container h1 {
+        font-size: 2.5rem;
+    }
+    
+    .container p {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        width: 12rem;
+        font-size: 1.3rem;
+    }
+
+    .tipos-mapas h2 {
+        font-size: 2rem;
+    }
+
+    .mapa {
+        /* Anteriormente: width: 95%; */
+        /* Novo ajuste: Reduza a largura aqui, talvez 85% ou 90% */
+        width: 40%; /* Ocupa 85% em telas muito pequenas */
+        max-width: 25rem; /* Limita a largura a 250px em telas muito pequenas */
+        margin: 0.8rem auto;
+    }
+
+    .mapa img {
+        padding: 0.5rem;
+    }
+
+    .features h2, .how-it-works h2 {
+        font-size: 2rem;
+    }
+}

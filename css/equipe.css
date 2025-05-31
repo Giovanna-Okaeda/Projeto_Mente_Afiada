@@ -1,0 +1,369 @@
+/*barra de nav*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: var(--border);
+    background-color: #3e321c;
+    z-index: 1000; 
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: var(--border);
+    background-color: #3e321c;
+    z-index: 1000; 
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Nome do site no menu */
+.logo img {
+    width: 20rem;
+    margin-left: 2rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
+    font-weight: 300;
+    color: var(--text);
+}
+
+.navbar a:hover {
+    color: #e9d5a0;
+    font-size: clamp(1.7rem, 2.1vw, 1.9rem);
+    
+}
+
+.banner-scroll {
+    background-color: rgb(80, 71, 54);
+    background-image: url('../img/banner/baanner2.png');
+    background-size: 50%;             
+    background-repeat: no-repeat;
+    background-position: right center;  
+    background-attachment: fixed;       
+    height: 80rem;                      
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+.banner-scroll h1 {
+    font-size: 12rem;
+    padding-top: 26rem;
+    padding-left: 4rem;
+    color: #eae1d2;
+}
+
+.banner-scroll h2 {
+    font-size: 6rem;
+    padding-left: 4rem;
+    color: var(--text);
+    font-weight: 400;
+}
+
+.banner-scroll::before {
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: right center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;              
+    transform: translateZ(0);
+    transition: opacity 0.3s ease;
+}
+
+/*conteudo principal*/
+.main-content {
+    padding: 6rem 2rem;
+    text-align: center;
+    background-color: var(--maincolor); 
+}
+
+.main-content h1 {
+    font-size: 4rem;
+    color: var(--btn);
+    margin-bottom: 15px;
+}
+
+.main-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: var(--p);
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.equipe-grid {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.membro-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membro-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.membro-card img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 8px solid #31c2c2;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.membro-card h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.membro-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.membro-card p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.redes-sociais {
+    margin-top: 15px;
+}
+
+.redes-sociais a {
+    display: inline-block;
+    margin: 0 10px; 
+    transition: transform 0.2s ease;
+}
+
+.redes-sociais a:hover {
+    transform: scale(1.1); 
+}
+
+.redes-sociais img {
+    width: 35px; 
+    height: 35px;
+    border-radius: 0; 
+    border: none; 
+    box-shadow: none;
+    margin: 0; 
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1286px) {
+    .main-content {
+        padding: 5rem 1.5rem;
+    }
+    .main-content h1 {
+        font-size: 3.5rem;
+    }
+    .main-content p {
+        font-size: 1.8rem;
+        max-width: 70rem;
+        margin-bottom: 4rem;
+    }
+
+    .equipe-grid {
+        padding: 3rem 1.5rem;
+        margin-bottom: 6rem;
+    }
+
+    .membro-card {
+        padding: 3rem;
+        max-width: 45rem;
+    }
+    .membro-card img {
+        width: 16rem;
+        height: 16rem;
+        margin-bottom: 2rem;
+    }
+
+    .membro-card h3 {
+        font-size: 2.3rem;
+    }
+
+    .membro-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .membro-card p {
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .redes-sociais a {
+        margin: 0 0.8rem;
+    }
+
+    .redes-sociais img {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+/* Para telas menores*/
+@media (max-width: 767px) {
+    .main-content {
+        padding: 4rem 1rem;
+    }
+
+    .main-content h1 {
+        font-size: 3rem;
+    }
+
+    .main-content p {
+        font-size: 1.6rem;
+        max-width: 95%; 
+        margin-bottom: 3rem;
+    }
+
+    .equipe-grid {
+        padding: 2rem 1rem;
+        margin-bottom: 4rem;
+    }
+
+    .membro-card {
+        padding: 2.5rem;
+        max-width: 90%; 
+        box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+    }
+
+    .membro-card img {
+        width: 14rem;
+        height: 14rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .membro-card h3 {
+        font-size: 2.2rem;
+    }
+
+    .membro-card h4 {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .membro-card p {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        text-align: left; 
+    }
+
+    .redes-sociais a {
+        margin: 0 0.6rem;
+    }
+
+    .redes-sociais img {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 3rem 0.5rem;
+    }
+
+    .main-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-content p {
+        font-size: 1.5rem;
+    }
+
+    .equipe-grid {
+        padding: 1.5rem 0.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .membro-card {
+        padding: 2rem;
+        max-width: 95%;
+    }
+
+    .membro-card img {
+        width: 12rem;
+        height: 12rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .membro-card h3 {
+        font-size: 2rem;
+    }
+
+    .membro-card h4 {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .membro-card p {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .redes-sociais img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}

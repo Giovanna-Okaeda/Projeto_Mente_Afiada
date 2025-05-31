@@ -1,0 +1,87 @@
+:root {
+    --maincolor: #f5e6c5;
+    --black: #131313;
+    --btn: #835c2c;
+    --btnhover: #f5f0e1;
+    --text: #c1a16b;
+    --p: #926f34;
+    --border: 0.1rem solid #c1a16b;
+    --gold: #E6C164;
+    --transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para efeitos de hover */
+    --transitionhover: translateY(-8px);
+    --box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    --menu: #3e321c;
+    font-size: 62.5%; /* Define 1rem = 10px*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.3s linear;
+    font-family: "Montserra", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--maincolor);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: var(--border);
+    background-color: #3e321c;
+    z-index: 1000; 
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+    padding: 1.5rem 5%; 
+    position: relative;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo img {
+    width: 20rem;
+    margin-left: 2rem;
+}
+
+.header section .navbar {
+    display: flex; 
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--text);
+}
+
+.navbar a:hover {
+    color: #e9d5a0;
+    font-size: clamp(1.7rem, 2.1vw, 1.9rem);
+    
+}
+
+footer {
+    background-color: #3e321c; 
+    color: var(--text); 
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.4rem;
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    z-index: 100;
+}

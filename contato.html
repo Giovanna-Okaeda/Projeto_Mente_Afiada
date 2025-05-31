@@ -1,48 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!--ignore-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mente Afiada</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/contato.css">
+    <link rel="stylesheet" href="../css/responsivo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
 </head>
-    <body>
-        <!-- Logo do site -->
-        <header class="header">
-            <section>
-                <span class="logo"><img src="../img/logo/logo (4).png" alt="logo"></span>
-                <!-- Barra de navegação -->
-                <nav class="navbar">
+
+<body>
+    <!-- Barra de navegação -->
+    <header class="header">
+        <section>
+            <span class="logo"><img src="../img/logo/logo3.png" alt="logo"></span>
+            <div id="menu-btn" class="fas fa-bars"></div> 
+            <nav class="navbar">
                 <a href="index.html">Home</a>
+                <a href="produtos.html">Produtos</a>
                 <a href="planner.html">Planner de Estudo</a>
                 <a href="mapa-mental.html">Mapa Mental</a>
                 <a href="contato.html">Contato</a>
                 <a href="sobre.html">Sobre</a>
                 <a href="equipe.html">Equipe</a>
-                </nav>
-            </section>
-        </header>
+            </nav>
+        </section>
+    </header>
+
     <section id="contato" class="contact">
         <h2>Entre em Contato Conosco</h2>
         <p>Tem alguma dúvida ou sugestão? Envie-nos uma mensagem!</p>
-        <form class="contact-form">
-            <input type="text" placeholder="Seu Nome">
-            <input type="email" placeholder="Seu Email">
-            <textarea placeholder="Sua Mensagem"></textarea>
+        <form id="contactForm" class="contact-form">
+            <div>
+                <label for="name"></label>
+                <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+                <span class="error-message" id="nameError"></span>
+            </div>
+            <div>
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Seu Email" required>
+                <span class="error-message" id="emailError"></span>
+            </div>
+            <div>
+                <label for="message"></label>
+                <textarea id="message" name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+                <span class="error-message" id="messageError"></span>
+            </div>
             <button type="submit" class="btn">Enviar Mensagem</button>
         </form>
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p>Mensagem enviada com sucesso!</p>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Mente Afiada. Todos os direitos reservados.</p>
     </footer>
-    <script src="../js/main.js/planner.js"></script>
+        <script src="../js/menu.js"></script>
+        <script src="../js/contato.js"></script>
     </body>
 </html>

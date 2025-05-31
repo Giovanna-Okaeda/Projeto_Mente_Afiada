@@ -1,29 +1,5 @@
-:root {
-    --maincolor: #eae1d2;
-    --black: #131313;
-    --btn: #835c2c;
-    --text: #c1a16b;
-    --p: #926f34;
-    --border: 0.1rem solid #c1a16b;
-    --gold: #E6C164;
-    font-size: 62.5%; /* Define 1rem = 10px para facilitar cálculos */
-}
 
-* {
-    margin: 0;
-    padding: 0;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    transition: 0.2s linear;
-    font-family: "Roboto", sans-serif;
-    box-sizing: border-box; /* Evita overflow por padding/margin */
-}
-
-body {
-    background-color: var(--maincolor);
-}
-
+/*barra de nav*/
 .header {
     position: fixed;
     top: 0;
@@ -31,7 +7,7 @@ body {
     right: 0;
     border-bottom: var(--border);
     background-color: #3e321c;
-    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+    z-index: 1000;
 }
 
 .header section {
@@ -43,7 +19,26 @@ body {
     margin: 0 auto;
 }
 
-/* Nome do site no menu */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: var(--border);
+    background-color: #3e321c;
+    z-index: 1000; 
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Nome do site na nav*/
 .logo img {
     width: 20rem;
     margin-left: 2rem;
@@ -66,78 +61,62 @@ body {
     font-size: clamp(1.7rem, 2.1vw, 1.9rem);
     
 }
-
-.margin {
-    padding: 6rem;
-}
-
-.cont {
-    padding: 5rem 9rem  15rem;
-}
-
-.home {
-    padding-top: 4rem; /* Espaço para o header fixo */
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap; /* Permite quebra em telas menores */
-    justify-content: space-between;
-    align-items: center;
+.banner-scroll {
     background-color: rgb(80, 71, 54);
-    border-radius: 3rem;
-    margin: 10rem auto;
-    max-width: 100%; /* Remove largura fixa */
-}
-
-.colunm-1 {
-    flex: 1 1 40rem; /* Cresce e encolhe, com base mínima de 400px */
-    padding: 2rem;
-}
-
-.h1-logo {
-    font-size: clamp(2.5rem, 5vw, 5rem);
-    font-weight: 800;
-    color: var(--maincolor);
-    margin: 1.5rem 2rem;
-}
-
-.p-logo {
-    font-size: clamp(1.4rem, 2vw, 2rem);
-    color: var(--text);
-    font-weight: 300;
-    margin: 1.5rem 2rem;
-}
-
-.colunm-2 {
-    flex: 1 1 40rem;
-    display: flex;
-    justify-content: center;
-}
-
-.banner {
+    background-image: url('../img/banner/baanner2.png');
+    background-size: 50%;              
+    background-repeat: no-repeat;
+    background-position: right center;  
+    background-attachment: fixed;
+    height: 80rem;                     
     width: 100%;
-    height: auto; /* Evita distorção */
-    max-height: 40rem;
-    border-radius: 3rem;
-    object-fit: cover; /* Ajusta imagem sem distorcer */
+    z-index: 1;
+    position: relative;
+}
+
+.banner-scroll h1 {
+    font-size: 12rem;
+    padding-top: 26rem;
+    padding-left: 4rem;
+    color: #eae1d2;
+    word-break: normal;
+}
+
+.banner-scroll h2 {
+    font-size: 6rem;
+    padding-left: 4rem;
+    color: var(--text);
+    font-weight: 400;
+}
+
+.banner-scroll::before {
+    background-size: 60%;         
+    background-repeat: no-repeat;
+    background-position: right center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;              
+    transform: translateZ(0);
+    transition: opacity 0.3s ease;
 }
 /*final do container*/
 
-.introduction .div-introduction {
-    text-align: center;
+.introduction {
+    padding: 6rem 15rem;
 }
 
-.div-introduction h1 {
-    font-size: 5rem;
-    justify-content: center;
-    align-items: center;
+.introduction h1 {
+    font-size: 4.2rem;
+    text-align: center;
     color: var(--p);
     margin-bottom: 4rem;
-    font-weight: 800;
+    font-weight: 700;
 }
 
-.div-introduction p {
+.introduction p {
     font-size: 2rem;
     color: var(--text);
     margin: 2rem 13rem 2rem 13rem;
@@ -148,15 +127,58 @@ body {
 }
 
 footer {
-    background-color: #3e321c; /* Cor de fundo do seu footer */
-    color: var(--text); /* Cor do texto do seu footer */
+    background-color: #3e321c; 
+    color: var(--text); 
     text-align: center;
     padding: 2rem;
     font-size: 1.4rem;
-    bottom: 0; /* Alinha a parte inferior do elemento com a parte inferior da janela */
-    left: 0; /* Alinha a parte esquerda do elemento com a parte esquerda da janela */
-    width: 100%; /* Faz o footer ocupar toda a largura */
-    z-index: 100; /* Garante que o footer fique acima de outros elementos (se necessário) */
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    z-index: 100; 
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1296px) {
+    .introduction {
+        padding: 6rem 5rem; 
+    }
+
+    .introduction h1 {
+        font-size: 4rem;
+    }
+
+    .introduction p {
+        font-size: 2.3rem;
+        margin: 3rem;
+    }
+}
+
+/* Para telas menores*/
+@media (max-width: 767px) {
+    .introduction {
+        padding: 6rem 1.5rem; 
+    }
+
+    .introduction h1 {
+        font-size: 3rem;
+    }
+
+    .introduction p {
+        font-size: 1.8rem;
+        margin: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .introduction h1 {
+        font-size: 2.8rem;
+    }
+
+    .introduction p {
+        font-size: 1.6rem;
+        margin: 3rem;
+    }
 
 }
 
