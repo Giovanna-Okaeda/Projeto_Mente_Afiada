@@ -4,7 +4,11 @@
     }
 }
 
-@media (max-width: 1286px) {
+@media (max-width: 1296px) {
+    #menu-btn {
+        display: none;
+    }
+
     body {
         font-size: 18px;
     }
@@ -31,6 +35,7 @@
         font-size: 4rem;
     }
 }
+
 
 /* Media Query para Telas Médias (até 1150px) - ATIVA O MENU MOBILE */
 @media (max-width: 1150px) {

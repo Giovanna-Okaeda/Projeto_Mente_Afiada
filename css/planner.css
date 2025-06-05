@@ -576,6 +576,10 @@ footer {
         margin-top: 9rem;
     }
 
+    #search-results ul {
+        font-size: 1rem;
+    }
+
     #search-results p.no-results {
         font-size: 1rem;
     }
@@ -618,7 +622,7 @@ footer {
         width: calc(100% - 20px); 
         margin-right: 0; 
         margin-bottom: 2rem; 
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .search-suggestions button {
