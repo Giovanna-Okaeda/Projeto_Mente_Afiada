@@ -17,30 +17,43 @@ Tecnologias utilizadas: HTML, CSS, JavaScript.
 ### Estrutura de Pastas
 
 ```plaintext
-├── css/                      # Arquivos de estilos (CSS)
-│   ├── contato.css           # Estilos específicos da página de contato
-│   ├── equipe.css            # Estilos da página da equipe
-│   ├── home.css              # Estilos da página inicial (home)
-│   ├── mapa-mental.css       # Estilos da página de mapa mental
-│   ├── planner.css           # Estilos da página de planner
-│   ├── responsivo.css        # Estilos responsivos para diferentes telas
-│   ├── sobre.css             # Estilos da página sobre
-│   └── style.css             # Estilo global principal
-├── img/                      # Imagens utilizadas no projeto
-│   ├── banner/               # Imagens de banner do site
-│   ├── logo/                 # Logos utilizados no site
-│   └── produtos/             # Imagens dos produtos/ferramentas oferecidos
-├── js/                       # Scripts JavaScript
-│   ├── api.js                # Requisições ou interações com APIs
-│   ├── main.js               # Lógica principal do site
-│   └── menu.js               # Funcionalidade do menu (ex: menu responsivo)
-├── contato.html              # Página de contato
-├── equipe.html               # Página da equipe
-├── index.html                # Página inicial (home)
-├── mapa-mental.html          # Página com mapas mentais
-├── planner.html              # Página com planner de estudos
-└── sobre.html                # Página sobre a empresa
-
+.
+├── api/                   # Pasta para arquivos JSON
+├── css/                   # Pasta para arquivos .css
+│   ├── contato.css
+│   ├── equipe.css
+│   ├── home.css
+│   ├── mapa-mental.css
+│   ├── planner.css
+│   ├── produtos.css
+│   ├── responsivo.css
+│   ├── sobre.css
+│   └── style.css
+├── img/                   # Pasta principal para imagens
+│   ├── banner/
+│   ├── icons/
+│   ├── logo/
+│   ├── mapas/
+│   │   ├── 3d/
+│   │   ├── colorido/
+│   │   ├── desenho/
+│   │   └── dourados/
+│   └── produtos/
+├── js/                    # Pasta para arquivos .js
+│   ├── api.js
+│   ├── contato.js
+│   ├── equipe.js
+│   ├── mapa-mental.js
+│   ├── menu.js
+│   ├── planner.js
+│   ├── produtos.js
+├── contato.html
+├── equipe.html
+├── index.html
+├── mapa-mental.html
+├── planner.html
+├── produtos.html
+└── sobre.html
 ```
 
 ### Colaboradores
